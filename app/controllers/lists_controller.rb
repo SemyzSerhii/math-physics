@@ -5,17 +5,25 @@ class ListsController < ApplicationController
   end
 
   def show; end
-end
+
+  def new
+    @list = List.new
+  end
+
+  def create; end
 
 
-private
 
-def find_post
-  @list = List.find(params[:id])
-end
 
-def posts_params
-  params.require(:list).permit(
-    :title, :body
-  )
+  private
+
+  def find_post
+    @list = List.find(params[:id])
+  end
+
+  def posts_params
+    params.require(:list).permit(
+      :title, :body
+    )
+  end
 end
