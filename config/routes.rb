@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  root 'lists#index'
+  root 'tasks#index'
 
-
-  resources :lists
-  resources :sum_deff_prods
+  resources :tasks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
