@@ -6,14 +6,14 @@
     <h5 class="card-title">Sum, difference, product</h5>
     <p class="card-text"> Hi, this method will help you find out the sum, difference and product of any two numbers.</p>
     <div class="input-group">
-      <%= form_for @answers do |f| %>
+      <% form_for @answers do |f| %>
         <div class="input-group-prepend">
           <span class="input-group-text">First and last number</span>
         </div>
-        <%= f.label :first_number%><br />
-        <%= f.text_field :first_number, required: true, class: "form-control" , placeholder: "Enter Your First number"%>
-        <%= f.label :second_number%><br />
-        <%= f.text_field :second_number, required: true, class: "form-control" , placeholder: "Enter Your First number"%>
+        <%= f.label :first_number.to_s%><br />
+        <%= f.text_field :first_number.to_s, required: true, class: "form-control" , placeholder: "Enter Your First number"%>
+        <%= f.label :second_number.to_s%><br />
+        <%= f.text_field :second_number.to_s, required: true, class: "form-control" , placeholder: "Enter Your First number"%>
       <% end %>
         <%= @answers %>
     </div>
