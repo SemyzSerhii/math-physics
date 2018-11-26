@@ -1,0 +1,33 @@
+<div id="2" class="card, indent" style="width: 60rem; display: flex; ">
+  <span>
+      <img class="card-img-top" style="width: 400px; height: 400px; display:inline-block;"
+         src="https://png2.kisspng.com/20180502/jze/kisspng-mathematics-number-sense-nonpositional-numeral-sys-mathematics-clipart-5aea3c50112ff8.1689120115253003040704.png"
+         alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Formula</h5>
+        <p class="card-text, stile_text">
+         Hello, you need to set two numbers to calculate the formula.
+        </p>
+      </div>
+  </span>
+  <span>
+    <div class="input-group">
+      <form>
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="x" name="value_x">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="y" name="value_y">
+        </div>
+        <button type="submit" class="btn btn-primary">Answer</button>
+      </form>
+    <div>
+      <div style="margin-top: 30px">
+        <% result = @answers.formula_solution( params[:value_x].to_i, params[:value_y].to_i) %>
+        <p class="stile_text"> Answer: <%= result %></p>
+      </div>
+    </div>
+  </div>
+  </span>
+</div>
+</div>

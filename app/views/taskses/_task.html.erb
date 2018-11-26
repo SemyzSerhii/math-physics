@@ -1,0 +1,35 @@
+<div id="1" class="card, indent" style="width: 60rem; display: flex; ">
+  <span>
+      <img class="card-img-top" style="width: 400px; height: 400px; display:inline-block;"
+         src="https://png2.kisspng.com/20180502/jze/kisspng-mathematics-number-sense-nonpositional-numeral-sys-mathematics-clipart-5aea3c50112ff8.1689120115253003040704.png"
+         alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Sum, difference, product</h5>
+        <p class="card-text, stile_text">
+          Hi, this method will help you find out the sum, difference and product of any two numbers.
+        </p>
+      </div>
+  </span>
+  <span>
+    <div class="input-group">
+      <form>
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="first number" name="first_number">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="second number" name="second_number">
+        </div>
+        <button type="submit" class="btn btn-primary">Answer</button>
+      </form>
+    <div>
+      <div style="margin-top: 30px">
+        <% result = @answers.sum_diff_product( params[:first_number].to_i, params[:second_number].to_i) %>
+        <p class="stile_text"> Sum: <%= result[:sum] %></p>
+        <p class="stile_text"> Difference:<%= result[:diff] %></p>
+        <p class="stile_text"> Product: <%= result[:product] %></p>
+      </div>
+    </div>
+  </div>
+  </span>
+</div>
+</div>
