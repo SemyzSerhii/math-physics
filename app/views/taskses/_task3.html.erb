@@ -1,0 +1,25 @@
+<div id="3" class="card, indent" style="width: 60rem; display: flex; ">
+  <span style="width: 780px">
+    <%=image_tag('images_list/cub.png', alt: "formula", class:"card-img-top",
+      style:"width: 400px; height: 400px; display:inline-block;") %>
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Cub</h5>
+        <p class="card-text, stile_text">
+         Given the length of the edge of the cube. Find the volume of the cube and the area of its side surface.
+        </p>
+      </div>
+  </span>
+  <span style="width: 190px">
+    <%= form_tag('/#3', method: 'get') do %>
+        <%= label_tag :length_of_the_edge, "length of the edge: "%>
+      <%= text_field_tag :length_of_the_edge, params[:length_of_the_edge], required: true, class: "form-control",
+        placeholder: "length edge"%>
+      <%= submit_tag "Answer", class:"btn btn-primary", style: "margin-top: 20px" %>
+    <% end %>
+      <div style="margin-top: 30px">
+        <p class="stile_text"> Volume: <%= @task3[:volume] %></p>
+        <p class="stile_text"> Area: <%= @task3[:area] %></p>
+      </div>
+  </span>
+</div>
+</div>
