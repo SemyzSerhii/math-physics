@@ -1,0 +1,28 @@
+<div id="4" class="card, indent" style="width: 60rem; display: flex; ">
+  <span style="width: 780px">
+      <%=image_tag('images_list/number.png', alt: "formula", class:"card-img-top",
+        style:"width: 400px; height: 400px; display:inline-block;") %>
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Arithmetical, Geometrical numbers</h5>
+        <p class="card-text, stile_text">
+       Two real positive numbers are given. Find the arithmetic mean and the geometric mean of these numbers.
+        </p>
+      </div>
+  </span>
+  <span style="width: 190px">
+    <%= form_tag('/#4', method: 'get') do %>
+        <%= label_tag :first_number, "First number: "%>
+        <%= text_field_tag :first_number, params[:first_number], required: true, class: "form-control",
+          placeholder: "First number"%>
+        <%= label_tag :second_number, "Second number:"%>
+        <%= text_field_tag :second_number, params[:second_number], required: true, class: "form-control",
+          placeholder: "Second number"%>
+        <%= submit_tag "Answer", class:"btn btn-primary", style: "margin-top: 20px" %>
+    <% end %>
+      <div style="margin-top: 30px">
+        <p class="stile_text"> Arithmetical: <%= @task4[:arithmetical] %></p>
+        <p class="stile_text"> Geometrical:<%= @task4[:geometrical] %></p>
+      </div>
+  </span>
+</div>
+</div>

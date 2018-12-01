@@ -1,0 +1,28 @@
+<div id="6" class="card, indent" style="width: 60rem; display: flex; ">
+  <span style="width: 780px">
+      <%=image_tag('images_list/400px-TrigonometryTriangle.svg.png', alt: "formula", class:"card-img-top",
+        style:"width: 400px; height: 400px; display:inline-block;") %>
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Area and hypotenuse triangle</h5>
+        <p class="card-text, stile_text">
+       Given the legs of a right triangle. Find its hypotenuse and area.
+        </p>
+      </div>
+  </span>
+  <span style="width: 190px">
+    <%= form_tag('/#6', method: 'get') do %>
+        <%= label_tag :first_leg, "First leg: "%>
+        <%= text_field_tag :first_leg, params[:first_leg], required: true, class: "form-control",
+          placeholder: "First leg"%>
+        <%= label_tag :second_leg, "Second leg:"%>
+        <%= text_field_tag :second_leg, params[:second_leg], required: true, class: "form-control",
+          placeholder: "Second leg"%>
+        <%= submit_tag "Answer", class:"btn btn-primary", style: "margin-top: 20px" %>
+    <% end %>
+      <div style="margin-top: 30px">
+        <p class="stile_text"> Area: <%= @task6[:area] %></p>
+        <p class="stile_text"> Hypotenuse:<%= @task6[:hypotenuse] %></p>
+      </div>
+  </span>
+</div>
+</div>
