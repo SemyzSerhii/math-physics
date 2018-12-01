@@ -5,4 +5,11 @@ def list
    Feature.new
 end
 
+  def all_tasks
+    methods = Feature.instance_methods( false ).each do |method_name|
+      method_name
+    end
+    @tasks_num = methods.each { |elem| elem.to_s }
+  end
+
 end

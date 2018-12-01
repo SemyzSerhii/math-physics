@@ -1,0 +1,35 @@
+<div id="7" class="card, indent" style="width: 60rem; display: flex; ">
+  <span style="width: 780px">
+      <%=image_tag('images_list/temperature.png', alt: "formula", class:"card-img-top",
+        style:"width: 400px; height: 400px; display:inline-block;") %>
+      <div class="card-body">
+        <h5 class="card-title, stile_text">Volume and temperature mixture water</h5>
+        <p class="card-text, stile_text">
+      Mixed v1 liters of water temperature t1 with v2 liters of water temperature t2.
+          Find the volume and temperature of the resulting mixture.
+        </p>
+      </div>
+  </span>
+  <span style="width: 190px">
+    <%= form_tag('/#7', method: 'get') do %>
+      <%= label_tag :f_volue, "First volume: "%>
+      <%= text_field_tag :f_volue, params[:f_volue], required: true, class: "form-control",
+          placeholder: "First volume"%>
+      <%= label_tag :f_temperature, "First temperature: "%>
+      <%= text_field_tag :f_temperature, params[:f_temperature], required: true, class: "form-control",
+          placeholder: "First temperature"%>
+      <%= label_tag :s_value, "Second volume: "%>
+      <%= text_field_tag :s_value, params[:s_value], required: true, class: "form-control",
+        placeholder: "Second volume"%>
+      <%= label_tag :s_temperature, "Second temperature: "%>
+      <%= text_field_tag :s_temperature, params[:s_temperature], required: true, class: "form-control",
+        placeholder: "Second temperature"%>
+      <%= submit_tag "Answer", class:"btn btn-primary", style: "margin-top: 20px" %>
+    <% end %>
+      <div style="margin-top: 30px">
+        <p class="stile_text"> Volume: <%= @task7[:value] %></p>
+        <p class="stile_text"> Temperature:<%= @task7[:tempetature] %></p>
+      </div>
+  </span>
+</div>
+</div>
